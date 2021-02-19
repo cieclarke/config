@@ -5,6 +5,9 @@ const cors = require('cors');
 const port = 3000;
 const app = express();
 
+const gardenlightsConfig = require('./gardenlights.config.json');
+const podcastConfig = require('./podcasts.config.json');
+
 app.use(bodyParser.json());
 app.use(cors());
 
@@ -19,19 +22,11 @@ app.get('/', (req, res) => {
 });
 
 app.get('/podcast', (req, res) => {
-    res.type("json");
-    res.sendFile(
-        path.join(__dirname + '/podcasts.config.json'),
-        { headers: { "content-type": "application/json"}}
-    );
+    res.json(podcastConfig);
 });
 
 app.get('/gardenlights', (req, res) => {
-    res.type("json");
-    res.sendFile(
-        path.join(__dirname + '/gardenlights.config.json'),
-        { headers: { "content-type": "application/json"}}
-    );
+    res.json(gardenlightsConfig);
 });
 
 app.listen(port, () => console.log('Listening on port ' + port));

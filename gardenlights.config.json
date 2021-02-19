@@ -5,7 +5,7 @@
         "port": 10001
     },
     {
-        "posistion": "house",
+        "position": "house",
         "server": "192.168.1.35",
         "port": 10001
     }],
