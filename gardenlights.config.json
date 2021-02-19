@@ -1,0 +1,46 @@
+{
+    "lsdevices": [{
+        "position": "annex",
+        "server": "192.168.1.xx",
+        "port": 10001
+    },
+    {
+        "posistion": "house",
+        "server": "192.168.1.35",
+        "port": 10001
+    }],
+    "zones" : [
+        {
+            "id" : 0,
+            "name" : "all",
+            "display" : "All Lights",
+            "lsdevice": "house"
+        },
+        {
+            "id" : 1,
+            "name" : "pathway",
+            "display" : "Pathway",
+            "lsdevice": "house"
+        },
+        {
+            "id" : 2,
+            "name" : "frontgarden",
+            "display" : "Front Garden",
+            "lsdevice": "house"
+        },
+        {
+            "id" : 3,
+            "name" : "driveway",
+            "display" : "Drive & House",
+            "lsdevice": "house"
+        },
+        {
+            "id" : 4,
+            "name" : "pond",
+            "display" : "Pond & Back",
+            "lsdevice": "house"
+        }
+    ]
+        
+    
+}
